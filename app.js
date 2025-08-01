@@ -21,3 +21,14 @@ function atualizarLista(){
         lista.appendChild(li);
     });
 }
+const sortear = (lista) => lista[Math.floor(Math.random() * lista.length)];
+function sortearAmigo() {
+    if (amigos.length < 2) {
+        alert('É necessário pelo menos 2 amigos para realizar o sorteio.');
+        return;
+    }
+    const amigoSorteado = sortear(amigos);
+    console.log(amigoSorteado);
+    const mensagem = `O amigo sorteado é: ${amigoSorteado}`;
+    document.getElementById('resultado').textContent = mensagem;
+}
